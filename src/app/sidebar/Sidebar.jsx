@@ -2,11 +2,15 @@
 import Image from "next/image";
 import Logo from "/public/images/Logo Icon.png";
 import { RightIcon, SearchIcon } from "@/icons/Icons";
-import { dashboardMenu } from "./services/DashboardMenuData";
-import { useState } from "react";
 
-const DashboardMenu = () => {
+import { useState } from "react";
+import { sidebarData } from "./../../components/services/SidebarData";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const Sidebar = () => {
   const [open, setOpen] = useState([]);
+  const pathName = usePathname()
 
   const handleMenuClick = (index) => {
     setOpen((prev) => {
@@ -16,7 +20,7 @@ const DashboardMenu = () => {
     });
   };
   return (
-    <div className="bg-[#081028] h-screen w-[300px] px-7 pt-[38.28px]">
+    <div className="bg-[#081028] h-screen w-[300px] px-7 pt-[38.28px] border-r border-[#0B1739]">
       <div className="flex items-center gap-[6.23px]">
         <Image src={Logo} alt="loading....?" />
         <h3 className="text-white font-bold text-xl leading-[22px]">
@@ -35,8 +39,7 @@ const DashboardMenu = () => {
       </div>
 
       <ul className="text-[#AEB9E1] mt-[29.5px] text-sm font-medium">
-        {dashboardMenu?.map((menu, index) => (
-            
+        {sidebarData?.map((menu, index) => (
           <li
             onClick={(e) => {
               e.stopPropagation();
@@ -46,10 +49,10 @@ const DashboardMenu = () => {
             className=""
           >
             <div className="flex items-center justify-between">
-              <div className={`flex items-center gap-x-[6px] py-[11px] `}>
-                <span className="cursor-pointer"> {menu?.icon}</span>
+              <Link href={menu.path} className={`${pathName ===  menu.path ? "text-[#CB3CFF] icon" : ""} flex items-center gap-x-[6px] py-[11px] `}>
+                <span className="cursor-pointer "> {menu?.icon}</span>
                 <span className="cursor-pointer"> {menu?.title}</span>
-              </div>
+              </Link>
               {menu.submenu && (
                 <span
                   className={`pr-[5px] cursor-pointer duration-300 transition-transform ${
@@ -66,18 +69,16 @@ const DashboardMenu = () => {
               }`}
             >
               {menu.submenu &&
-                open[index] &&
                 menu?.submenu?.map((sub, subIndex) => (
                   <li
                     onClick={(e) => e.stopPropagation()}
                     key={subIndex}
                     className={`py-[11px] pl-[14.25px] hover:bg-[#0A1330] hover:text-white  relative group rounded-l-md
 
-  hover:border-[#CB3CFF]`}
+                   hover:border-[#CB3CFF]`}
                   >
-                    <span className="cursor-pointer   ">{sub?.title}</span>
-                    <span className= "  group-hover:bg-[#CB3CFF] w-[3.149px] h-[42px] absolute left-0 top-0 rounded-l-md "></span>
-
+                    <Link href={sub.path} className={`cursor-pointer  ${pathName === sub.path ? "text-[#CB3CFF] icon" : ""} `}>{sub?.title}</Link>
+                    <span className="  group-hover:bg-[#CB3CFF] w-[3.149px] h-[42px] absolute left-0 top-0 rounded-l-md "></span>
                   </li>
                 ))}
             </ul>
@@ -88,4 +89,4 @@ const DashboardMenu = () => {
   );
 };
 
-export default DashboardMenu;
+export default Sidebar;

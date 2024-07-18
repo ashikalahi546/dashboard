@@ -24,10 +24,19 @@ export const SearchIcon = () => {
 };
 export const HomeIcon = () => {
   return (
-    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0.0683594 6.83355C0.0683594 6.41283 0.249846 6.01216 0.567115 5.73244L6.07891 0.872996C6.643 0.375668 7.49372 0.375668 8.05781 0.872996L13.5696 5.73244C13.8869 6.01216 14.0684 6.41283 14.0684 6.83355V13.0259C14.0684 13.84 13.4021 14.5 12.5802 14.5H1.55656C0.73465 14.5 0.0683594 13.84 0.0683594 13.0259V6.83355Z" fill="#AEB9E1"/>
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="icon"
+    >
+      <path
+        d="M0.0683594 6.83355C0.0683594 6.41283 0.249846 6.01216 0.567115 5.73244L6.07891 0.872996C6.643 0.375668 7.49372 0.375668 8.05781 0.872996L13.5696 5.73244C13.8869 6.01216 14.0684 6.41283 14.0684 6.83355V13.0259C14.0684 13.84 13.4021 14.5 12.5802 14.5H1.55656C0.73465 14.5 0.0683594 13.84 0.0683594 13.0259V6.83355Z"
+        fill="#AEB9E1"
+      />
     </svg>
-    
   );
 };
 export const StarIcon = () => {
@@ -120,32 +129,67 @@ export const SettingsIcon = () => {
 };
 export const TemplateIcon = () => {
   return (
-    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10.2989 5.4887C10.2989 5.4887 9.17241 9.02893 9.09195 9.35077C9.09195 9.02893 8.2069 2.67261 8.2069 2.67261C6.27586 2.67261 5.22989 4.04042 4.74713 5.4887C4.74713 5.4887 3.43604 8.24623 3.35558 8.56807C3.27512 8.32669 3.05747 5.56916 3.05747 5.56916C2.89655 3.79904 1.28736 2.67261 0 2.67261L1.6092 12.3278C3.62069 12.3278 4.74713 10.96 5.31034 9.51169C5.31034 9.51169 6.51724 6.37376 6.5977 6.21284C6.5977 6.37376 7.48276 12.3278 7.48276 12.3278C9.49425 12.3278 10.6207 11.0404 11.1839 9.67261L14 2.67261C11.908 2.67261 10.8621 4.04042 10.2989 5.4887Z" fill="#AEB9E1"/>
+    <svg
+      width="14"
+      height="15"
+      viewBox="0 0 14 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.2989 5.4887C10.2989 5.4887 9.17241 9.02893 9.09195 9.35077C9.09195 9.02893 8.2069 2.67261 8.2069 2.67261C6.27586 2.67261 5.22989 4.04042 4.74713 5.4887C4.74713 5.4887 3.43604 8.24623 3.35558 8.56807C3.27512 8.32669 3.05747 5.56916 3.05747 5.56916C2.89655 3.79904 1.28736 2.67261 0 2.67261L1.6092 12.3278C3.62069 12.3278 4.74713 10.96 5.31034 9.51169C5.31034 9.51169 6.51724 6.37376 6.5977 6.21284C6.5977 6.37376 7.48276 12.3278 7.48276 12.3278C9.49425 12.3278 10.6207 11.0404 11.1839 9.67261L14 2.67261C11.908 2.67261 10.8621 4.04042 10.2989 5.4887Z"
+        fill="#AEB9E1"
+      />
     </svg>
-    
   );
 };
 export const RightIcon = () => {
   return (
-    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.8">
-    <path d="M4.75 9.5L7.75 6.5L4.75 3.5" stroke="#AEB9E1" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.8">
+        <path
+          d="M4.75 9.5L7.75 6.5L4.75 3.5"
+          stroke="#AEB9E1"
+          stroke-width="0.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
     </svg>
-    
-    
   );
 };
 export const DownIcon = () => {
   return (
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.8">
-<path d="M3.25 5L6.25 8L9.25 5" stroke="#AEB9E1" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
-
-    
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 13 13"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.8">
+        <path
+          d="M3.25 5L6.25 8L9.25 5"
+          stroke="#AEB9E1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </svg>
+  );
+};
+export const DownloadIcon = () => {
+  return (
+    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.00098 0.96875V10.9688" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M0.90918 6.87695L5.00009 10.9679L9.091 6.87695" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
     
   );
 };

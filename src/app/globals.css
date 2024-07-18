@@ -14,3 +14,7 @@
     max-height: 200px;
     opacity: 1;
   }
+
+  .icon svg path{
+    fill: #CB3CFF;
+  }
